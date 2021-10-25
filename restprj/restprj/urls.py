@@ -25,6 +25,12 @@ router.register('',EmployeeViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('emp/', include(router.urls)),
     path('index/', HomeView.as_view(),name='index'),
+=======
+    path('emp/',include(router.urls)),
+    path('index/',HomeView.as_view(),name='index'),
+
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
 ]

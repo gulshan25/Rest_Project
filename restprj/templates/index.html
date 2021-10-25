@@ -25,24 +25,39 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 
+<<<<<<< HEAD
   Search: <input type="text" id="txtsearch" ng-model="srch">
+=======
+  
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
   <table class="table table-bordered" >
     <thead>
       <tr>
         <th scope="col">ID</th>
+<<<<<<< HEAD
         <th scope="col" style="cursor:pointer" ng-click="predicate='name'; reverse=!reverse">Name</th>
         <th scope="col" style="cursor:pointer" ng-click="predicate='email'; reverse=!reverse">E-mail</th>
         <th scope="col" style="cursor:pointer" ng-click="predicate='salary'; reverse=!reverse">Salary</th>
+=======
+        <th scope="col">Name</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Salary</th>
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
         <th scope="col">...</th>
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
         <tr dir-paginate="emp in employees|filter:srch|orderBy:predicate:reverse|itemsPerPage:5">
+=======
+        <tr ng-repeat="emp in employees">
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
         <td scope="row">[[emp.id]]</td>
         <td>[[emp.name]]</td>
         <td>[[emp.email]]</td>
         <td>[[emp.salary]]</td>
         <td>
+<<<<<<< HEAD
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="edit(emp.id)">
             <span>
                     
@@ -58,13 +73,34 @@
           </span>
           </button>
            
+=======
+            <button type="button" class="btn btn-default" data-bs-toggle="model" data-bs-target="exampleModal">
+                <span>
+                    
+                    <i class="fa fa-edit fa-2x" ></i>
+
+                </span>
+
+            </button>
+            <button type="button" class="btn btn-default" data-bs-toggle="model" data-bs-target="exampleModal">
+                <span>
+                    
+                    <i class="fa fa-trash fa-2x"></i>
+
+                </span>
+
+            </button>
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
         </td>
       </tr>
      
     </tbody>
   </table>
+<<<<<<< HEAD
   <dir-pagination-controls max-size="10" direction-links="true" boundary-links="true">
   </dir-pagination-controls>
+=======
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -94,17 +130,26 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal" ng-hide="isedit" ng-click="insert()">Save changes</button>
+<<<<<<< HEAD
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal" ng-hide="!isedit" ng-click="update()">Update changes</button>
         
+=======
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
         </div>
       </div>
     </div>
   </div>
     </div>
+<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/angular-utils-pagination@0.11.1/dirPagination.js"></script>
     <script> 
         var app=angular.module(
         "myapp",['angularUtils.directives.dirPagination'],
+=======
+    <script> 
+        var app=angular.module(
+        "myapp",[],
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
         function($interpolateProvider){
             $interpolateProvider.startSymbol('[[');
             $interpolateProvider.endSymbol(']]')
@@ -159,6 +204,7 @@
               $window.location.reload();
             },5000);
           };
+<<<<<<< HEAD
           //Update Method
           $scope.update=function(){
             var newemp=angular.copy($scope.current);
@@ -212,6 +258,12 @@
       };
 
               });
+=======
+
+
+
+        });
+>>>>>>> 29bf8bf6f84c5797206169df8c8c338d1f82dad7
 
         
         
