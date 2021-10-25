@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
-from restapp.views import EmployeeViewset
 
-router=routers.DefaultRouter() # 26 number connected
+from restapp.views import EmployeeViewset
+from restapp.views import HomeView
+
+router=routers.DefaultRouter()
 router.register('',EmployeeViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('emp/', include (router.urls)),
+    path('emp/', include(router.urls)),
+    path('index/', HomeView.as_view(),name='index'),
 ]
